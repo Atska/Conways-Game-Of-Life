@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-
+//components
 import NavBar from "./components/NavBar";
+import Game from "./components/Game";
 
-function App() {
+const App: React.FC = () => {
+  const [isRunning, setIsRunning] = useState(false);
+
   return (
     <div className="App">
       <NavBar />
-      <h1>App</h1>
+      <Game />
     </div>
   );
-}
+};
 
 export default App;

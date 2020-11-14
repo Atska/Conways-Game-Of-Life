@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 
-function NavBar() {
+const NavBar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="container flex">
@@ -17,11 +17,14 @@ function NavBar() {
             <li>
               <button>Stop</button>
             </li>
+            <li>
+              <button>Clear</button>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;

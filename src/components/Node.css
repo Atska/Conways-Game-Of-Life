@@ -1,0 +1,7 @@
+.node {
+  height: 20px;
+  width: 20px;
+  border: solid 1px gray;
+  display: inline-flex;
+  background: white;
+}

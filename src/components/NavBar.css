@@ -13,10 +13,6 @@
   margin: 0 10px;
 }
 
-.navbar .title:hover {
-  border-bottom: 3px snow solid;
-}
-
 .navbar button {
   background-color: transparent;
   color: rgb(255, 255, 240);

@@ -1,25 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Game.css";
-
+//components
 import Node from "./Node";
+//helper
+import { INode, GameProps } from "../interface/interface";
 
-let rows = Math.floor((window.innerHeight - 70 - 80) / 20) * 0.9 - 1;
-// 1440/20(one node is 20px) * 0.9(left and right border 1px; 144/20 and substract it from product)
-// -2( remove two node left and right)
-let cols = Math.floor(window.innerWidth / 20) * 0.9 - 2;
+const Game: React.FC<GameProps> = ({ isRunning, grid }) => {
+  const handleNodeClick = (row: number, column: number) => {
+    console.log(row, column);
+  };
 
-const Game: React.FC = () => {
-  const [grid] = useState(createGrid(rows, cols));
-
-  const board = grid.map((row, rowIndex) => {
+  const board = grid.map((row: INode[], rowIndex: number) => {
     return (
       // each row must be in a div so you can form a field in css
       <div className="Row" key={rowIndex}>
-        {row.map((node, nodeIndex) => {
+        {row.map((node: INode, nodeIndex: number) => {
           // destructuring node object
           const { row, column, isCell } = node;
           return (
-            <Node key={nodeIndex} row={row} column={column} isCell={isCell} />
+            <Node
+              key={nodeIndex}
+              row={row}
+              column={column}
+              isCell={isCell}
+              handleNodeClick={() => handleNodeClick(rowIndex, nodeIndex)}
+            />
           );
         })}
       </div>
@@ -39,29 +44,3 @@ const Game: React.FC = () => {
 };
 
 export default Game;
-
-interface INode {
-  row: number;
-  column: number;
-  isCell: boolean;
-}
-
-function createGrid(maxRow: number, maxColumn: number): INode[][] {
-  const grid: INode[][] = [];
-
-  for (let row = 0; row < maxRow; row++) {
-    const currentRow: INode[] = [];
-
-    for (let column = 0; column < maxColumn; column++) {
-      let nodeSchema: INode = {
-        row: row,
-        column: column,
-        isCell: false,
-      };
-      currentRow.push(nodeSchema);
-    }
-    grid.push(currentRow);
-  }
-
-  return grid;
-}

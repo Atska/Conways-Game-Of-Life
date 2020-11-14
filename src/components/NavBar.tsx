@@ -1,7 +1,25 @@
 import React from "react";
 import "./NavBar.css";
 
-const NavBar: React.FC = () => {
+interface Props {
+  isRunning: boolean;
+  handleRunning(): void;
+}
+
+const NavBar: React.FC<Props> = ({ isRunning, handleRunning }) => {
+  const handleStart = (): void => {
+    if (!isRunning) {
+      handleRunning();
+      console.log(isRunning);
+    }
+  };
+  const handleStop = (): void => {
+    if (isRunning) {
+      handleRunning();
+      console.log(isRunning);
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="container flex">
@@ -12,10 +30,10 @@ const NavBar: React.FC = () => {
         <nav>
           <ul>
             <li>
-              <button>Start</button>
+              <button onClick={handleStart}>Start</button>
             </li>
             <li>
-              <button>Stop</button>
+              <button onClick={handleStop}>Stop</button>
             </li>
             <li>
               <button>Clear</button>

@@ -1,7 +1,7 @@
 .node {
   height: 20px;
   width: 20px;
-  border: solid 1px gray;
+  border: solid 1px #243b55;
   display: inline-flex;
   background: white;
 }
@@ -9,7 +9,7 @@
 .node-cell {
   height: 20px;
   width: 20px;
-  border: solid 1px gray;
+  border: solid 1px #243b55;
   display: inline-flex;
   background: #028f1e;
 }

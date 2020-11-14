@@ -15,7 +15,7 @@ let rows = Math.floor((window.innerHeight - 70 - 80) / 20) * 0.9 - 1;
 
 const App: React.FC = () => {
   const [isRunning, setIsRunning] = useState<boolean>(false);
-  const [grid] = useState<INode[][] | undefined>(createGrid(rows, cols));
+  let [grid, setGrid] = useState<INode[][]>(createGrid(rows, cols));
 
   const handleRunning = (): void => {
     setIsRunning((prev) => !prev);
@@ -24,7 +24,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar isRunning={isRunning} handleRunning={handleRunning} />
-      <Game isRunning={isRunning} grid={grid} />
+      <Game isRunning={isRunning} grid={grid} setGrid={setGrid} />
     </div>
   );
 };

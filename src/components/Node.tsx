@@ -7,7 +7,10 @@ const Node: React.FC<NodeProps> = ({
   row,
   column,
   isCell,
-  handleNodeClick,
+  handleOnClick,
+  onMouseDown,
+  onMouseUp,
+  onMouseEnter,
 }) => {
   const id = `${row}, ${column}`;
 
@@ -20,7 +23,16 @@ const Node: React.FC<NodeProps> = ({
     <div
       id={id}
       className={className()}
-      onClick={() => handleNodeClick()}
+      onClick={() => handleOnClick()}
+      onMouseEnter={() => {
+        onMouseEnter();
+      }}
+      onMouseDown={() => {
+        onMouseDown();
+      }}
+      onMouseUp={() => {
+        onMouseUp();
+      }}
     ></div>
   );
 };

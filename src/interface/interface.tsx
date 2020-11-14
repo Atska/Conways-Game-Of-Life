@@ -6,12 +6,16 @@ export interface INode {
 
 export interface GameProps {
   isRunning: boolean;
-  grid: any;
+  grid: INode[][];
+  setGrid: any;
 }
 
 export interface NodeProps {
   row: number;
   column: number;
   isCell: boolean;
-  handleNodeClick: any;
+  handleOnClick: any;
+  onMouseDown: any;
+  onMouseUp: any;
+  onMouseEnter: any;
 }

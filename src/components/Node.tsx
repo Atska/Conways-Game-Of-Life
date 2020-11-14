@@ -22,6 +22,7 @@ const Node: React.FC<NodeProps> = ({
   return (
     <div
       id={id}
+      data-testid={`${id}`}
       className={className()}
       onClick={() => handleOnClick()}
       onMouseEnter={() => {

@@ -1,12 +1,9 @@
 import React from "react";
 import "./NavBar.css";
+//interface
+import { NavbarProps } from "../interface/interface";
 
-interface Props {
-  isRunning: boolean;
-  handleRunning(): void;
-}
-
-const NavBar: React.FC<Props> = ({ isRunning, handleRunning }) => {
+const NavBar: React.FC<NavbarProps> = ({ isRunning, handleRunning }) => {
   const handleStart = (): void => {
     if (!isRunning) {
       handleRunning();

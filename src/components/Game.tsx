@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Game.css";
 //components
 import Node from "./Node";
@@ -30,7 +30,7 @@ const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
   const board = grid.map((row: INode[], rowIndex: number) => {
     return (
       // each row must be in a div so you can form a field in css
-      <div className="Row" key={rowIndex}>
+      <div className="Row" key={rowIndex} data-testid={`${rowIndex}`}>
         {row.map((node: INode, nodeIndex: number) => {
           // destructuring node object
           const { row, column, isCell } = node;
@@ -59,7 +59,9 @@ const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
         <div className="game-title">
           <h1>Game of Life</h1>
         </div>
-        <div className="board">{board}</div>
+        <div className="board" data-testid="test-board">
+          {board}
+        </div>
       </div>
     </div>
   );

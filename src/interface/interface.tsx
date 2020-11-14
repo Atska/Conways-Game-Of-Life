@@ -19,3 +19,8 @@ export interface NodeProps {
   onMouseUp: any;
   onMouseEnter: any;
 }
+
+export interface NavbarProps {
+  isRunning: boolean;
+  handleRunning: any;
+}

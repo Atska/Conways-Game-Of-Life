@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Game.css";
-//components
 import Node from "./Node";
-//helper
 import { INode, GameProps } from "../interface/interface";
+import updatedCellGrid from "../helperFunctions/updatedCellGrid";
 
 const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
   const [MouseIsClicked, setMouseIsClicked] = useState<boolean>(false);
   const handleOnClick = (row: number, column: number): void => {
-    let newGrid = setCellNode(grid, row, column);
+    let newGrid = updatedCellGrid(grid, row, column);
     setGrid(newGrid);
   };
 
@@ -22,7 +21,7 @@ const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
   const onMouseEnter = (row: number, column: number): void => {
     const { isCell } = grid[row][column];
     if (MouseIsClicked && !isCell) {
-      let newGrid = setCellNode(grid, row, column);
+      let newGrid = updatedCellGrid(grid, row, column);
       setGrid(newGrid);
     }
   };
@@ -68,17 +67,3 @@ const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
 };
 
 export default Game;
-
-const setCellNode = (grid: INode[][], row: number, column: number) => {
-  const currentNode = grid[row][column];
-  if (currentNode.isCell) {
-    currentNode.isCell = false;
-  } else {
-    currentNode.isCell = true;
-  }
-  let newGrid = [];
-  for (let i = 0; i < grid.length; i++) {
-    newGrid.push(grid[i]);
-  }
-  return newGrid;
-};

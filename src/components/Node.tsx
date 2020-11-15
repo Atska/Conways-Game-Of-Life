@@ -1,6 +1,5 @@
 import React from "react";
 import "./Node.css";
-//interface
 import { NodeProps } from "../interface/interface";
 
 const Node: React.FC<NodeProps> = ({

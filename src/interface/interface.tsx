@@ -7,20 +7,20 @@ export interface INode {
 export interface GameProps {
   isRunning: boolean;
   grid: INode[][];
-  setGrid: any;
+  setGrid: (grid: INode[][]) => void;
 }
 
 export interface NodeProps {
   row: number;
   column: number;
   isCell: boolean;
-  handleOnClick: any;
-  onMouseDown: any;
-  onMouseUp: any;
-  onMouseEnter: any;
+  handleOnClick: () => void;
+  onMouseDown: () => void;
+  onMouseUp: () => void;
+  onMouseEnter: () => void;
 }
 
 export interface NavbarProps {
   isRunning: boolean;
-  handleRunning: any;
+  handleRunning: () => void;
 }

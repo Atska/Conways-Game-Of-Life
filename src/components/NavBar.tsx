@@ -1,22 +1,8 @@
 import React from "react";
 import "./NavBar.css";
-//interface
 import { NavbarProps } from "../interface/interface";
 
 const NavBar: React.FC<NavbarProps> = ({ isRunning, handleRunning }) => {
-  const handleStart = (): void => {
-    if (!isRunning) {
-      handleRunning();
-      console.log(isRunning);
-    }
-  };
-  const handleStop = (): void => {
-    if (isRunning) {
-      handleRunning();
-      console.log(isRunning);
-    }
-  };
-
   return (
     <div className="navbar">
       <div className="container flex">
@@ -27,13 +13,15 @@ const NavBar: React.FC<NavbarProps> = ({ isRunning, handleRunning }) => {
         <nav>
           <ul>
             <li>
-              <button onClick={handleStart}>Start</button>
-            </li>
-            <li>
-              <button onClick={handleStop}>Stop</button>
+              <button onClick={() => handleRunning()}>
+                {isRunning ? "Stop" : "Start"}
+              </button>
             </li>
             <li>
               <button>Clear</button>
+            </li>
+            <li>
+              <input type="range" className="slider"></input>
             </li>
           </ul>
         </nav>

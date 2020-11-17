@@ -11,5 +11,5 @@
   width: 20px;
   border: solid 1px #243b55;
   display: inline-flex;
-  background: #028f1e;
+  background: linear-gradient(to right, #58af30, #66ca38);
 }

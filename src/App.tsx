@@ -28,7 +28,7 @@ const App: React.FC = () => {
     //break condition
     if (!runningRef.current) return;
     setGrid((prevGrid) => game(prevGrid));
-    setTimeout(handleGame, 100 * parseInt(speedRef.current));
+    setTimeout(handleGame, 50 * parseInt(speedRef.current));
   }, []);
 
   const handleSlider = (event: React.ChangeEvent<HTMLInputElement>) => {

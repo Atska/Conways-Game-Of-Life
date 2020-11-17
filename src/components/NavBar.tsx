@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import RulesButton from "./RulesButton";
 import { NavbarProps } from "../interface/interface";
 
 const NavBar: React.FC<NavbarProps> = ({
@@ -41,6 +42,9 @@ const NavBar: React.FC<NavbarProps> = ({
                 ></input>
                 <div className="right">Slow</div>
               </div>
+            </li>
+            <li>
+              <RulesButton />
             </li>
             <li>
               <div className="github">

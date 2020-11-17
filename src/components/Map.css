@@ -24,9 +24,24 @@ Map in gerneral
   font-weight: 800;
 }
 
+.content img {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px ghostwhite;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 300px;
 }

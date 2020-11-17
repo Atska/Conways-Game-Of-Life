@@ -6,6 +6,8 @@
   background: linear-gradient(to right, #141e30, #243b55);
   height: 70px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .navbar ul {
@@ -91,9 +93,11 @@ GITHUB BUTTON
 .git-link {
   margin: 0 10px;
   color: white;
-  border: none;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline ghostwhite;
   font-weight: 600;
+}
+
+@media screen {
 }

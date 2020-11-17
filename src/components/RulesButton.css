@@ -1,0 +1,23 @@
+.rules-btn {
+  font-weight: 600;
+  text-decoration: underline ghostwhite;
+  cursor: pointer;
+}
+
+.rules-modal {
+  width: 600px;
+}
+
+.rules-modal h3 {
+  text-align: center;
+}
+
+.rules-modal button {
+  margin: 0 15px;
+  padding: 5px 8px;
+  font-weight: 800;
+}
+
+.howto-text {
+  border-bottom: solid 1px ghostwhite;
+}

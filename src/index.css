@@ -8,6 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to right, #141e30, #243b55);
   color: rgb(255, 255, 240);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 code {

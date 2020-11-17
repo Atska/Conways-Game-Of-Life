@@ -1,0 +1,83 @@
+.space-modal {
+  color: ghostwhite;
+}
+
+.space-modal button {
+  margin: 0 15px;
+  padding: 5px 8px;
+  font-weight: 800;
+}
+
+.content img {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+}
+
+.info-text {
+  width: 300px;
+  border-bottom: solid 1px ghostwhite;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px ghostwhite;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/***********
+StillLives
+***********/
+.StillLives-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline ghostwhite;
+}
+
+.StillLives-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+/***********
+Oscillators
+***********/
+.oscillator-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline ghostwhite;
+}
+
+.oscillator-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+/***********
+Spaceships
+***********/
+.spaceships-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline ghostwhite;
+}
+
+.spaceships-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}

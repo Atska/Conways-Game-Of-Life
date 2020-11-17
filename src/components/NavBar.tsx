@@ -48,8 +48,11 @@ const NavBar: React.FC<NavbarProps> = ({
             </li>
             <li>
               <div className="github">
-                <a href="https://github.com/Atska/Conways-Game-Of-Life">
-                  <div className="git-link">Github</div>
+                <a
+                  href="https://github.com/Atska/Conways-Game-Of-Life"
+                  className="git-link"
+                >
+                  Github
                 </a>
               </div>
             </li>

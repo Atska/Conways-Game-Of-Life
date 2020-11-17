@@ -1,7 +1,7 @@
 import { INode } from "../interface/interface";
 
 /**
- *
+ * Creates a new grid and changes the grid[i][j].isCell in false or true
  * @param grid Matrix of Node objects
  * @param row row location
  * @param column column location

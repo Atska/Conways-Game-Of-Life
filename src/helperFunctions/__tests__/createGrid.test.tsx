@@ -1,6 +1,6 @@
-import { createGrid } from "../createGrid";
+import createGrid from "../createGrid";
 
-it("should create a valid grid", () => {
+it("createGrid -> should create a valid grid", () => {
   const testGrid = createGrid(2, 2);
   expect(testGrid).toHaveLength(2);
   expect(testGrid[0]).toHaveLength(2);

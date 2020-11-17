@@ -24,5 +24,5 @@ export interface NavbarProps {
   speed: string;
   handleRunning: () => void;
   handleClearGrid: () => void;
-  handleSlider: any;
+  handleSlider: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }

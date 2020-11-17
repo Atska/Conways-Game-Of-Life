@@ -1,6 +1,6 @@
 import { INode } from "../interface/interface";
 
-export function createGrid(maxRow: number, maxColumn: number): INode[][] {
+function createGrid(maxRow: number, maxColumn: number): INode[][] {
   const grid = [];
 
   for (let row = 0; row < maxRow; row++) {
@@ -19,3 +19,5 @@ export function createGrid(maxRow: number, maxColumn: number): INode[][] {
 
   return grid;
 }
+
+export default createGrid;

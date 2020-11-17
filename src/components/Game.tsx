@@ -4,7 +4,7 @@ import Node from "./Node";
 import { INode, GameProps } from "../interface/interface";
 import updatedCellGrid from "../helperFunctions/updatedCellGrid";
 
-const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
+const Game: React.FC<GameProps> = ({ grid, setGrid }) => {
   const [MouseIsClicked, setMouseIsClicked] = useState<boolean>(false);
   const handleOnClick = (row: number, column: number): void => {
     let newGrid = updatedCellGrid(grid, row, column);
@@ -55,9 +55,6 @@ const Game: React.FC<GameProps> = ({ isRunning, grid, setGrid }) => {
   return (
     <div className="game">
       <div className="game-container">
-        <div className="game-title">
-          <h1>Game of Life</h1>
-        </div>
         <div className="board" data-testid="test-board">
           {board}
         </div>

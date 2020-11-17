@@ -5,7 +5,6 @@ export interface INode {
 }
 
 export interface GameProps {
-  isRunning: boolean;
   grid: INode[][];
   setGrid: (grid: INode[][]) => void;
 }
@@ -22,5 +21,8 @@ export interface NodeProps {
 
 export interface NavbarProps {
   isRunning: boolean;
+  speed: string;
   handleRunning: () => void;
+  handleClearGrid: () => void;
+  handleSlider: any;
 }

@@ -2,7 +2,13 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import NavBar from "../NavBar";
 
-const nav = <NavBar isRunning={false} handleRunning={() => {}} />;
+const nav = (
+  <NavBar
+    isRunning={false}
+    handleRunning={() => {}}
+    handleClearGrid={() => {}}
+  />
+);
 
 describe("<NavBar />", () => {
   it("tests if title is rendered", () => {
@@ -23,9 +29,9 @@ describe("<NavBar />", () => {
     expect(startButton).toBeInTheDocument();
   });
 
-  it("tests if stop button exists", () => {
+  it("tests if clear button exists", () => {
     render(nav);
-    const stopButton = screen.queryByText(/Stop/i);
+    const stopButton = screen.queryByText(/Clear/i);
     expect(stopButton).toBeInTheDocument();
   });
 });

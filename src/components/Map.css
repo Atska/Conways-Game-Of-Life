@@ -1,0 +1,32 @@
+/**********
+Map in gerneral
+**********/
+.map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.map h3 {
+  cursor: pointer;
+}
+
+/**********
+  Modal
+**********/
+.space-modal {
+  color: ghostwhite;
+}
+
+.space-modal button {
+  margin: 0 15px;
+  padding: 5px 8px;
+  font-weight: 800;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px ghostwhite;
+}

@@ -2,7 +2,13 @@ import React from "react";
 import "./NavBar.css";
 import { NavbarProps } from "../interface/interface";
 
-const NavBar: React.FC<NavbarProps> = ({ isRunning, handleRunning }) => {
+const NavBar: React.FC<NavbarProps> = ({
+  isRunning,
+  speed,
+  handleRunning,
+  handleClearGrid,
+  handleSlider,
+}) => {
   return (
     <div className="navbar">
       <div className="container flex">
@@ -18,10 +24,30 @@ const NavBar: React.FC<NavbarProps> = ({ isRunning, handleRunning }) => {
               </button>
             </li>
             <li>
-              <button>Clear</button>
+              <button onClick={() => handleClearGrid()}>Clear</button>
             </li>
             <li>
-              <input type="range" className="slider"></input>
+              <div className="maxSliderVal"></div>
+              <div className="slider">
+                <div className="left">Fast</div>
+                <input
+                  onChange={handleSlider}
+                  value={speed}
+                  step="1"
+                  type="range"
+                  min="1"
+                  max="11"
+                  className="slider"
+                ></input>
+                <div className="right">Slow</div>
+              </div>
+            </li>
+            <li>
+              <div className="github">
+                <a href="https://github.com/Atska/Conways-Game-Of-Life">
+                  <div className="git-link">Github</div>
+                </a>
+              </div>
             </li>
           </ul>
         </nav>

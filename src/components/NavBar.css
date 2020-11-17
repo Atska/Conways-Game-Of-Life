@@ -1,3 +1,7 @@
+/***************
+    NAVBAR
+****************/
+
 .navbar {
   background: linear-gradient(to right, #141e30, #243b55);
   height: 70px;
@@ -12,19 +16,6 @@
 
 .navbar img {
   margin: 0 10px;
-}
-
-.navbar button {
-  background-color: transparent;
-  color: rgb(255, 255, 240);
-  border: 2px solid #141e30; /* Green */
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  padding: 8px 20px;
-  margin: 0 4px;
-  font-weight: 600;
-  outline: none;
 }
 
 .navbar .flex {
@@ -44,10 +35,37 @@
   align-items: center;
 }
 
-/* slider background*/
+/***************
+DEFAULT BUTTONS
+****************/
+
+.navbar button {
+  background-color: transparent;
+  color: rgb(255, 255, 240);
+  border: 2px solid #141e30; /* Green */
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 20px;
+  margin: 0 4px;
+  font-weight: 600;
+  outline: none;
+}
+
+/***************
+SLIDER BUTTON
+****************/
+
 .slider {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.slider input {
   -webkit-appearance: none;
-  margin: 0 30px;
   border-radius: 10px;
   background-color: rgb(177, 176, 176);
   height: 5px;
@@ -57,12 +75,25 @@
 }
 
 /* slider circle*/
-.slider::-webkit-slider-thumb {
+.slider input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
   height: 15px;
-  background: black;
+  background: ghostwhite;
   cursor: pointer;
   border-radius: 10px;
+}
+
+/***************
+GITHUB BUTTON
+****************/
+.git-link {
+  margin: 0 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
 }

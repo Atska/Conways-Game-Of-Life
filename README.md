@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Conways Game of Life
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| [>Link to App<](https://atska.github.io/Conways-Game-Of-Life/) |
+| -------------------------------------------------------------- |
 
-## Available Scripts
 
-In the project directory, you can run:
+#### How to use
 
-### `npm start`
+- Click on the board to initiate living cells
+- Press the Start button to start the simulation
+- Click the How-To-Play button for rules
+- Click on "Still Lives", "Oscillators" or "Spaceships for more info
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Table of Contents
 
-### `npm test`
+- [How To use](#how-to-use)
+- [Introduction](#introduction)
+- [How To Install](#how-to-install)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Introduction
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is showcasing the famous [Game of Life](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm). I made it in order to improve my css, html and typescript skills. All in all I am satisfied with my code and the features of this app. However I think there are still alot of things to improve. For example its desktop only and not suited for phones or tablets. Furthermore I became weak and was to lazy to code a dialog/modal in pure css/html so I used the dependency [react-modal](https://reactcommunity.org/react-modal/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Typescript
+- ReactJS
+- HTML
+- CSS
 
-### `npm run eject`
+[Back To The Top](#Conways-Game-of-Life)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How To Install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you do not want test it with the [LINK](https://atska.github.io/Conways-Game-Of-Life/) above you can always download this project. To host it locally use your terminal and write "npm install" and after that "npm start".
 
-## Learn More
+[Back To The Top](#Conways-Game-of-Life)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
